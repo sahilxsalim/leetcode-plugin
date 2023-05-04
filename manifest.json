@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Like/Dislike Hider",
+  "version": "1.0",
+  "description": "Hides the number of likes and dislikes on LeetCode problems",
+  "permissions": ["scripting", "webNavigation", "storage","activeTab"],
+  "host_permissions": [
+    "https://leetcode.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "type":"module",
+      "run_at": "document_end"
+    }
+  ]
+}
+
